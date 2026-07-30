@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>童巧云的 27 岁生日惊喜</title><style>html,body{height:100%;margin:0;background:#fff8f1}body{display:grid;place-items:center;color:#9b5863;font:600 17px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}.dot{animation:p 1s infinite alternate}@keyframes p{to{opacity:.35}}</style></head><body><div class="dot">正在打开生日惊喜…</div><script>
+const oldMain=`祝你 27 岁生日快乐。愿新一岁的你，仍然有做梦的勇气，也有把普通日子过得闪闪发光的能力。`;
+const newMain=`恭喜童老师顺利通关 26 岁的副本！🥳<br>这一年真的不容易，辛苦你了。<br><br>26 岁的你，好像越来越能够站在别人的立场去理解、体谅和包容他人，这是一种很珍贵的成熟。但我也希望，在理解世界、理解别人之外，你也能更多地理解自己、接纳自己、善待自己，不必总是那么用力。<br><br>愿 27 岁的你，重新找回心里的活力，恢复对生命的热情、对生活的期待，也依然保有那份温柔、真诚和勇敢。<br><br>还有一句一直很想告诉你：无论你是什么样子，无论你觉得自己够不够好，在我心里，我都一直很欣赏你。`;
+const changes=[
+[oldMain,newMain],
+[`<article><span class="wish-number">01</span><h3>愿快乐有迹可循</h3><p>在每一个看似平常的清晨，也能遇见值得微笑的小事。</p></article>`,`<article><span class="wish-number">01</span><h3>愿爱在对的季节抵达</h3><p>愿神亲自预备属于你的爱情和婚姻。<br>“冬天已往，雨水止住过去了。地上百花开放……我的佳偶，我的美人，起来，与我同去。”<br>当生命的花开放、散发馨香，对的季节、对的相遇，也正在路上。</p></article>`],
+[`<article><span class="wish-number">02</span><h3>愿好事准时抵达</h3><p>所有认真走过的路，都在未来的某处给你温柔的回应。</p></article>`,`<article><span class="wish-number">02</span><h3>愿神亲自成全、坚固你</h3><p>「那赐诸般恩典的神，曾在基督里召你们，得享祂永远的荣耀，等你们暂受苦难之后，必要亲自成全你们，坚固你们，赐力量给你们，建立你们。」<br>——彼得前书 5:10</p></article>`],
+[`<article><span class="wish-number">03</span><h3>愿你永远被爱</h3><p>被世界拥抱，也永远保有好好爱自己的那份坚定。</p></article>`,`<article><span class="wish-number">03</span><h3>愿新一岁满有恩典</h3><p>愿神亲自成全你生命中一切美好的计划，也成全你心中关于婚姻的盼望；愿祂所预备的，远超过你所求所想。<br>生日快乐，愿新的一岁，满有恩典、满有喜乐，也满有神同在。</p></article>`]
+];
+fetch("./index.html",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error(r.status);return r.text()}).then(h=>{for(const [a,b] of changes)h=h.replace(a,b);h=h.replace("</head>",`<style>.main-wish{white-space:normal!important;max-width:46rem!important}.wish-list article{min-height:27rem!important}.wish-list p{line-height:1.9!important}</style></head>`);document.open();document.write(h);document.close()}).catch(()=>{document.body.innerHTML="页面加载失败，请刷新重试"});
+</script></body></html>
